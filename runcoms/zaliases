@@ -1,0 +1,132 @@
+# TODO: case $HOST tms.
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias tmpd='tail -f ~/.config/mpd/mpd.log | egrep -v "(process command \"status\")|client.*closed$|client.*command returned.*"'
+
+alias todo="todo.sh"
+
+# ddcutil
+alias ddcutil="sudo ddcutil"
+
+# QEMU
+alias libvirt-clear-logs='echo "" | sudo tee /var/log/libvirt/qemu/win10.log'
+
+# XFCE script
+alias bxb='backup_xfce4 -b'
+alias bxr='backup_xfce4 -r'
+alias bxd='backup_xfce4 -d'
+
+alias scroff="xset dpms force standby"
+
+alias p='ps -f'
+
+alias diff-aliases='diff ~/.zaliases_arco ~/.bashrc-latest'
+
+alias foobar2000='wine "C:\Program Files (x86)\foobar2000\foobar2000.exe"'
+
+alias kmsg='sudo less /proc/kmsg'
+
+alias updatedb="sudo updatedb"
+
+# vim - alternative to Arco's bashrc
+alias edit="vim"
+alias vlightdm="sudo vim /etc/lightdm/lightdm.conf"
+alias vpacman="sudo vim /etc/pacman.conf"
+alias vgrub="sudo vim /etc/default/grub"
+alias vmkinitcpio="sudo vim /etc/mkinitcpio.conf"
+alias vslim="sudo vim /etc/slim.conf"
+alias voblogout="sudo vim /etc/oblogout.conf"
+alias vmirrorlist="sudo vim /etc/pacman.d/mirrorlist"
+alias vconfgrub="sudo vim /boot/grub/grub.cfg"
+alias vtlp="sudo vim /etc/tlp.conf"
+
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+if type "colordiff" > /dev/null; then
+    alias diff='colordiff'
+fi
+
+alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
+
+alias t='tail -f'
+
+alias dud='du -d 1 -h'
+alias duf='du -sh *'
+alias fd='find . -type d -name'
+alias ff='find . -type f -name'
+
+alias h='history'
+alias hgrep="fc -El 0 | grep"
+alias sortnr='sort -n -r'
+alias whereami=display_info
+
+
+#### Aliases for ZSH ####
+#
+alias edit-zshrc='$EDITOR ~/.zshrc' # Quick access to the ~/.zshrc file
+
+# Make zsh know about hosts already accessed by SSH
+zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
+
+alias aliases='less $HOME/.zaliases'
+
+
+#### NOT IN USE ####
+#
+#alias rm='rm -i'
+#alias cp='cp -i'
+#alias mv='mv -i'
+
+#list whats inside packed file
+#alias -s zip="unzip -l"
+#alias -s rar="unrar l"
+#alias -s tar="tar tf"
+#alias -s tar.gz="echo "
+#alias -s ace="unace l"
+
+
+# Apt - package manager
+#alias apt-aurmpu="sudo apt autoremove --purge"
+#alias apt-aurm="sudo apt autoremove"
+#alias apt-fix="sudo apt --fix-broken install"
+#alias apt-it="sudo apt install"
+#alias apt-li="apt list --installed"
+#alias apt-lu="apt list --upgradable"
+#alias apt-reit="sudo apt install --reinstall"
+#alias apt-rm="sudo apt remove"
+#alias apt-rmpu="sudo apt remove --purge"
+#alias apt-sr="apt search"
+#alias apt-sh="apt show"
+#alias apt-ur="sudo apt update"
+#alias apt-up="sudo apt upgrade"
+
+# For LVM
+#alias lvs="sudo lvs"
+#alias vgs="sudo vgs"
+#alias pvs="sudo pvs"
+
+# ls, the common ones I use a lot shortened for rapid fire usage
+#alias l='ls -lFh'     #size,show type,human readable
+#alias la='ls -lAFh'   #long list,show almost all,show type,human readable
+#alias lr='ls -tRFh'   #sorted by date,recursive,show type,human readable
+#alias lt='ls -ltFh'   #long list,sorted by date,show type,human readable
+#alias ll='ls -l'      #long list
+#alias ldot='ls -ld .*'
+#alias lS='ls -1FSsh'
+#alias lart='ls -1Fcart'
+#alias lrt='ls -1Fcrt'
+#alias latr='ls -latr'
+
+
