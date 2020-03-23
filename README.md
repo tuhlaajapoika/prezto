@@ -5,6 +5,9 @@ Prezto is the configuration framework for [Zsh][1]; it enriches the command line
 interface environment with sane defaults, aliases, functions, auto completion,
 and prompt themes.
 
+This is my personal fork mostly for using enviromental variables and aliases. I'm learning to use git at the same time.
+
+
 Installation
 ------------
 
@@ -20,7 +23,7 @@ version is 4.3.11.
   2. Clone the repository:
 
      ```console
-     git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+     git clone --recursive https://github.com/tuhlaajapoika/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
      ```
 
   3. Create a new Zsh configuration by copying the Zsh configuration files
@@ -70,6 +73,38 @@ git pull
 git submodule update --init --recursive
 ```
 
+Configuring a remote fork 
+-----
+
+  1. Open Terminal.
+  2. List the current configured remote repository for your fork.
+  ```console
+  git remote -v
+  ```
+  3. Specify a new remote upstream repository that will be synced with the fork.
+  ```console
+  git remote add upstream https://github.com/sorin-ionescu/prezto.git 
+  ```
+  4. Verify.
+  ```console
+  git remote -v
+  ```
+  
+Syncing a fork 
+-----
+
+  1. Open terminal and change working directory to local project.
+  2. Fetch upstream, checkout fork's local master, merge 
+  ```console
+  git fetch upstream
+  git checkout master
+  git merge upstream/master
+  ```
+  3. If there are issues with submodules, update recursively
+  ```console
+  git submodule update --init --recursive
+  ```
+  
 Usage
 -----
 
