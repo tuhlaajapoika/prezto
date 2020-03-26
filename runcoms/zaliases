@@ -3,7 +3,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias tmpd='tail -f ~/.config/mpd/mpd.log | egrep -v "(process command \"status\")|client.*closed$|client.*command returned.*"'
+# MPD
+alias mpd-restart-server='systemctl --user stop {mpd.socket,mpd.service} && systemctl --user start {mpd.socket,mpd.service}'
+alias tmpd='tail -f /tmp/mpd.log | egrep -v "(process command \"status\")|client.*closed$|client.*command returned.*"'
 
 alias todo="todo.sh"
 
