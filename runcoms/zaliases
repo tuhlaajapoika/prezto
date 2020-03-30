@@ -12,8 +12,11 @@ alias todo="todo.sh"
 # ddcutil
 alias ddcutil="sudo ddcutil"
 
+alias fn='firefox -p noob'
+alias fp='firefox -p priv'
+
 # QEMU
-alias libvirt-clear-logs='echo "" | sudo tee /var/log/libvirt/qemu/win10.log'
+alias libvirt-clear-logs='echo "" | sudo tee /var/log/libvirt/qemu/win10.log*'
 
 # XFCE script
 alias bxb='backup_xfce4 -b'
