@@ -141,6 +141,8 @@ alias jctl="journalctl -p 3 -xb"
 #alias nmirrorlist="sudo nano /etc/pacman.d/mirrorlist"
 #alias nconfgrub="sudo nano /boot/grub/grub.cfg"
 
+#alias bls="betterlockscreen -u /usr/share/backgrounds/arcolinux/"
+
 #gpg
 #verify signature for isos
 alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
@@ -170,6 +172,7 @@ ex ()
       *.7z)        7z x $1      ;;
       *.deb)       ar x $1      ;;
       *.tar.xz)    tar xf $1    ;;
+      *.tar.zst)   unzstd $1    ;;
       *)           echo "'$1' cannot be extracted via ex()" ;;
     esac
   else
