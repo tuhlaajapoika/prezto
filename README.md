@@ -73,7 +73,7 @@ git pull
 git submodule update --init --recursive
 ```
 
-Configuring a remote fork 
+Configuring a remote fork
 -----
 
   1. Open Terminal.
@@ -83,28 +83,28 @@ Configuring a remote fork
   ```
   3. Specify a new remote upstream repository that will be synced with the fork.
   ```console
-  git remote add upstream https://github.com/sorin-ionescu/prezto.git 
+  git remote add upstream https://github.com/sorin-ionescu/prezto.git
   ```
   4. Verify.
   ```console
   git remote -v
   ```
-  
-Syncing a fork 
+
+Syncing a fork
 -----
 
   1. Open terminal and change working directory to local project.
-  2. Fetch upstream, checkout fork's local master, merge 
+  2. Fetch upstream, checkout fork's local master, merge
   ```console
   git fetch upstream
   git checkout master
   git merge upstream/master
   ```
-  3. If there are issues with submodules, update recursively
+  3. If there are issues with submodules: use gSu aka
   ```console
-  git submodule update --init --recursive
+  git submodule foreach git pull origin master
   ```
-  
+
 Usage
 -----
 
