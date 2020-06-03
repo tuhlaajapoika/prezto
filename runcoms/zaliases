@@ -16,7 +16,7 @@ alias fn='firefox -p noob'
 alias fp='firefox -p priv'
 
 # QEMU
-alias win10-logs='sudo tail -f /var/log/libvirt/qemu/win10.log'
+alias win10-logs='sudo tail -f /var/log/libvirt/qemu/Win10.log'
 alias libvirt-clear-logs='echo "" | sudo tee /var/log/libvirt/qemu/win10.log*'
 
 # XFCE script
