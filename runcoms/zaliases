@@ -48,6 +48,7 @@ alias vmirrorlist="sudo vim /etc/pacman.d/mirrorlist"
 alias vconfgrub="sudo vim /boot/grub/grub.cfg"
 alias vtlp="sudo vim /etc/tlp.conf"
 
+alias uppip='python /home/noob/git/priv/scripts/pip_upgrade.py'
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
