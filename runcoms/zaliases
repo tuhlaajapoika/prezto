@@ -38,17 +38,16 @@ alias updatedb="sudo updatedb"
 
 # vim - alternative to Arco's bashrc
 alias edit="vim"
-alias vlightdm="sudo vim /etc/lightdm/lightdm.conf"
-alias vpacman="sudo vim /etc/pacman.conf"
-alias vgrub="sudo vim /etc/default/grub"
-alias vmkinitcpio="sudo vim /etc/mkinitcpio.conf"
-alias vslim="sudo vim /etc/slim.conf"
-alias voblogout="sudo vim /etc/oblogout.conf"
-alias vmirrorlist="sudo vim /etc/pacman.d/mirrorlist"
-alias vconfgrub="sudo vim /boot/grub/grub.cfg"
-alias vtlp="sudo vim /etc/tlp.conf"
+alias vlightdm="sudoedit /etc/lightdm/lightdm.conf"
+alias vpacman="sudoedit /etc/pacman.conf"
+alias vgrub="sudoedit /etc/default/grub"
+alias vmkinitcpio="sudoedit /etc/mkinitcpio.conf"
+alias vslim="sudoedit /etc/slim.conf"
+alias voblogout="sudoedit /etc/oblogout.conf"
+alias vmirrorlist="sudoedit /etc/pacman.d/mirrorlist"
+alias vconfgrub="sudoedit /boot/grub/grub.cfg"
+alias vtlp="sudoedit /etc/tlp.conf"
 
-alias uppip='python /home/noob/git/priv/scripts/pip_upgrade.py'
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
