@@ -54,6 +54,9 @@ alias update='sudo pacman -Syyu'
 alias pksyua="yay -Syu --noconfirm"
 alias upall="yay -Syu --noconfirm"
 
+# yay list upgradable
+alias liupall="yay -Sy && yay -Qu"
+
 #ps
 alias psa="ps auxf"
 alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
