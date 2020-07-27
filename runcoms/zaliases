@@ -12,8 +12,9 @@ alias todo="todo.sh"
 # ddcutil
 alias ddcutil="sudo ddcutil"
 
-alias fn='firefox -p noob'
-alias fp='firefox -p priv'
+alias ffn='firefox -p noob'
+alias ffj='firefox -p jyu'
+alias ffp='firefox -p priv'
 
 # QEMU
 alias win10-logs='sudo tail -f /var/log/libvirt/qemu/Win10.log'
