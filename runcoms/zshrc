@@ -56,10 +56,10 @@ POWERLEVEL9K_VI_COMMAND_MODE_STRING="NOR"
 ####################
 
 
-# For fixing Tilix config
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-  source /etc/profile.d/vte.sh
-fi
+## For fixing Tilix config
+#if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+#  source /etc/profile.d/vte.sh
+#fi
 
 
 # Source
