@@ -85,6 +85,9 @@ setopt dotglob
 # allow overwritting existing files
 #setopt CLOBBER     # Use '>!' and '>>!' when this is commented out.
 
+# Disabled: CDABLE_VARS changes directory to a path stored in a variable.
+setopt nocdablevars
+
 # Search backwards and forwards with a pattern
 bindkey -M vicmd '^[R' history-incremental-pattern-search-backward
 bindkey -M vicmd '^[F' history-incremental-pattern-search-forward
