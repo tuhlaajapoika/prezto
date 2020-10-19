@@ -83,7 +83,7 @@ fi
 setopt dotglob
 
 # allow overwritting existing files
-setopt CLOBBER
+#setopt CLOBBER     # Use '>!' and '>>!' when this is commented out.
 
 # Search backwards and forwards with a pattern
 bindkey -M vicmd '^[R' history-incremental-pattern-search-backward
