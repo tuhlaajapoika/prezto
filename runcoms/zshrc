@@ -76,8 +76,19 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/runcoms/zaliases_arco" ]]; then
 fi
 
 
-# Colors
-#export TERM="xterm-256color"
+## Workaround for handling TERM variable in multiple tmux sessions properly -
+# Source:
+# https://wiki.archlinux.org/index.php/tmux#Correct_the_TERM_variable_according_to_terminal_type
+
+if [[ -n ${TMUX} && -n ${commands[tmux]} ]]; then
+  case $(tmux showenv TERM 2>/dev/null) in
+    *256color) ;&
+    TERM=fbterm)
+      TERM=screen-256color ;;
+    *)
+      TERM=screen
+  esac
+fi
 
 # dotglob lets glob match dotfiles
 setopt dotglob
