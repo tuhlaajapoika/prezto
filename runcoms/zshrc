@@ -1,65 +1,16 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 #
 # Executes commands at the start of an interactive session.
 #
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
-
-
-####################
-# POWERLEVEL9K & 10K
-#
-
-ZLE_RPROMPT_INDENT=0
-
-# configs for powerlevel{9k,10k}
-POWERLEVEL9K_MODE='nerdfont-complete'
-
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
-
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-
-POWERLEVEL9K_RPROMPT_ICON_LEFT=true
-
-#POWERLEVEL9K_NEWLINE_ICON="\uF09C"
-
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon ssh dir_writable dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time root_indicator background_jobs vi_mode todo disk_usage)
-#history
-
-#POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR_ICON="\uE0B0"
-#POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR_ICON="\uE0B1"
-#POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR_ICON="\uE0B2"
-#POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR_ICON="\uE0B3"
-#
-#POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX_ICON="%F{blue}"$'\u256D\u2500'"%F{white}"
-#POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX_ICON="%F{blue}"$'\u2570\uF460'"%F{white}"
-
-POWERLEVEL9K_USER_ROOT_ICON="\uF09C"
-POWERLEVEL9K_USER_SUDO_ICON="\uF09C"
-
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
-
-POWERLEVEL9K_VI_INSERT_MODE_STRING="INS"
-POWERLEVEL9K_VI_COMMAND_MODE_STRING="NOR"
-
-#POWERLEVEL9K_STATUS_VERBOSE=true
-#POWERLEVEL9K_STATUS_CROSS=true
-
-#POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=2
-#POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION=1
-
-#
-# POWERLEVEL9K & 10K
-####################
-
-
-## For fixing Tilix config
-#if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-#  source /etc/profile.d/vte.sh
-#fi
 
 
 # Source
@@ -107,4 +58,5 @@ bindkey -M viins '^[R' history-incremental-pattern-search-backward
 bindkey -M viins '^[F' history-incremental-pattern-search-forward
 
 
-## EOF
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
