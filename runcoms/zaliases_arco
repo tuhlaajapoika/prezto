@@ -16,6 +16,7 @@ alias udpate='sudo pacman -Syu'
 alias upate='sudo pacman -Syu'
 alias updte='sudo pacman -Syu'
 alias updqte='sudo pacman -Syu'
+alias upqll='yay -Syu --noconfirm'
 
 ## Colorize the grep command output for ease of use (good for log files)##
 #alias grep='grep --color=auto'
@@ -77,7 +78,7 @@ alias skel="$USER_SCRIPTS/arco_skel"
 alias bupskel='cp -Rf /etc/skel ~/.skel-backup-$(date +%Y.%m.%d-%H.%M.%S) && backup_xfce4 -b'
 
 #copy bashrc-latest over on bashrc - cb= copy bashrc
-#alias cb='sudo cp /etc/skel/.bashrc ~/.bashrc' #ZSH removed sourcing
+#alias cb='sudo cp /etc/skel/.bashrc ~/.bashrc && source ~/.bashrc'
 #copy /etc/skel/.zshrc over on ~/.zshrc - cb= copy zshrc
 #alias cz='sudo cp /etc/skel/.zshrc ~/.zshrc && source ~/.zshrc'
 
