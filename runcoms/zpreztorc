@@ -114,7 +114,7 @@ zstyle ':prezto:module:editor' key-bindings 'vi'
 #
 
 # Set the Pacman frontend.
-zstyle ':prezto:module:pacman' frontend 'yay'
+# zstyle ':prezto:module:pacman' frontend 'yay'
 
 #
 # Prompt
