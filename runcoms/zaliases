@@ -20,6 +20,9 @@ alias ffp='firefox -p priv'
 alias win10-logs='sudo tail -f /var/log/libvirt/qemu/Win10.log'
 alias libvirt-clear-logs='echo "" | sudo tee /var/log/libvirt/qemu/win10.log*'
 
+# qBittorrent - for legimite use only
+alias qbitl='qbittorrent --profile="$HOME/.config/qBittorrent-legalis"'
+
 # XFCE script
 alias bxb='backup_xfce4 -b'
 alias bxr='backup_xfce4 -r'
