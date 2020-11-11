@@ -9,22 +9,24 @@
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 
-  # ArcoLinux
-  if [ -d "$HOME/.bin" ]; then
-    PATH="$HOME/.bin:$PATH"
+  if [[ ! $(uname -o) == "Android" ]]; then
+    # ArcoLinux
+    if [ -d "$HOME/.bin" ]; then
+      PATH="$HOME/.bin:$PATH"
+    fi
+
+    if [ -d "$HOME/.local/bin" ]; then
+      PATH="$HOME/.local/bin:$PATH"
+    fi
+
+    # Export additional environment variables.
+    export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
+    export USER_SCRIPTS="$HOME/git/priv/scripts"
+
+
+    PATH="$PATH:$ANDROID_SDK_ROOT/tools"
+    PATH="$PATH:$ANDROID_SDK_ROOT/platform-tools"
+    PATH="$PATH:$USER_SCRIPTS"
+    PATH="$PATH:$USER_SCRIPTS/g810_leds_timeout"
   fi
-
-  if [ -d "$HOME/.local/bin" ]; then
-    PATH="$HOME/.local/bin:$PATH"
-  fi
-
-  # Export additional environment variables.
-  export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
-  export USER_SCRIPTS="$HOME/git/priv/scripts"
-
-
-  PATH="$PATH:$ANDROID_SDK_ROOT/tools"
-  PATH="$PATH:$ANDROID_SDK_ROOT/platform-tools"
-  PATH="$PATH:$USER_SCRIPTS"
-  PATH="$PATH:$USER_SCRIPTS/g810_leds_timeout"
 fi

@@ -1,0 +1,98 @@
+# TODO: if uname --operating-system == Android; then; else
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias todo="todo.sh"
+
+alias p='ps -f'
+
+#alias kmsg='less /proc/kmsg'
+
+# vim - alternative to Arco's bashrc
+alias edit="vim"
+
+# Apt - package manager
+alias upall='apt update && apt upgrade -y'
+alias apt-aurmpu='apt autoremove --purge'
+alias apt-aurm='apt autoremove'
+alias apt-fix='apt --fix-broken install'
+alias apt-it='apt install'
+alias apt-li='apt list --installed'
+alias apt-lu='apt list --upgradable'
+alias apt-reit='apt install --reinstall'
+alias apt-rm='apt remove'
+alias apt-rmpu='apt remove --purge'
+alias apt-sr='apt search'
+alias apt-sh='apt show'
+alias apt-ur='apt update'
+alias apt-up='apt upgrade'
+
+# enable color support of ls and also add handy aliases
+if type "dircolors" > /dev/null; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+if type "colordiff" > /dev/null; then
+    alias diff='colordiff'
+fi
+
+alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
+
+alias t='tail -f'
+
+alias dud='du -d 1 -h'
+alias duf='du -sh *'
+alias fd='find . -type d -name'
+alias ff='find . -type f -name'
+
+alias h='history'
+alias hgrep="fc -El 0 | grep"
+alias sortnr='sort -n -r'
+alias whereami=display_info
+
+
+#### Aliases for ZSH ####
+#
+alias edit-zshrc='$EDITOR ~/.zshrc' # Quick access to the ~/.zshrc file
+
+# Make zsh know about hosts already accessed by SSH
+zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
+
+alias aliases='less $HOME/.zaliases'
+
+
+#list whats inside packed file
+#alias -s zip="unzip -l"
+#alias -s rar="unrar l"
+#alias -s tar="tar tf"
+#alias -s tar.gz="echo "
+#alias -s ace="unace l"
+
+
+
+# For LVM
+#alias lvs="sudo lvs"
+#alias vgs="sudo vgs"
+#alias pvs="sudo pvs"
+
+# ls, the common ones I use a lot shortened for rapid fire usage
+#alias l='ls -lFh'     #size,show type,human readable
+#alias la='ls -lAFh'   #long list,show almost all,show type,human readable
+#alias lr='ls -tRFh'   #sorted by date,recursive,show type,human readable
+#alias lt='ls -ltFh'   #long list,sorted by date,show type,human readable
+#alias ll='ls -l'      #long list
+#alias ldot='ls -ld .*'
+#alias lS='ls -1FSsh'
+#alias lart='ls -1Fcart'
+#alias lrt='ls -1Fcrt'
+#alias latr='ls -latr'
+
+
