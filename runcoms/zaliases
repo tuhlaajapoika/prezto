@@ -3,7 +3,7 @@
 
 # MPD
 alias mpd-restart-server='systemctl --user stop {mpd.socket,mpd.service} && systemctl --user start {mpd.socket,mpd.service}'
-alias tmpd='tail -f /tmp/mpd.log | egrep -v "(process command \"status\")|client.*closed$|client.*command returned.*"'
+alias tmpd='tail -f /tmp/mpd.log | egrep -v "(process command \"currentsong\"|process command list|process command \"status\"|client.*closed$|client.*command returned.*)"'
 
 # ToDo script
 alias todo="todo.sh"
@@ -33,7 +33,7 @@ alias p='ps -f'
 
 alias diff-aliases='diff ~/.zaliases_arco ~/.bashrc-latest'
 
-alias foobar2000='wine "C:\Program Files (x86)\foobar2000\foobar2000.exe"'
+alias foobar2000='WINEARCH=win32 WINEPREFIX=~/.wine32 wine "C:\Program Files\foobar2000\foobar2000.exe"'
 
 alias kmsg='sudo less /proc/kmsg'
 
