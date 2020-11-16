@@ -8,6 +8,11 @@ alias tmpd='tail -f /tmp/mpd.log | egrep -v "(process command \"currentsong\"|pr
 # ToDo script
 alias todo="todo.sh"
 
+# gcalcli - Google Calendar
+alias gcal='gcalcli agenda'
+alias gcalw='gcalcli calw --monday'
+alias gcalm='gcalcli calm --monday'
+
 # ddcutil
 alias ddcutil="sudo ddcutil"
 
@@ -33,7 +38,7 @@ alias p='ps -f'
 
 alias diff-aliases='diff ~/.zaliases_arco ~/.bashrc-latest'
 
-alias foobar2000='WINEARCH=win32 WINEPREFIX=~/.wine32 wine "C:\Program Files\foobar2000\foobar2000.exe"'
+alias foobar2000='WINEARCH=win32 WINEPREFIX=~/.wine32_fb2k wine "C:\Program Files\foobar2000\foobar2000.exe"'
 
 alias kmsg='sudo less /proc/kmsg'
 
