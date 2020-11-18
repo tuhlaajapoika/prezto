@@ -9,8 +9,14 @@
 # Browser
 #
 
-if [[ "$OSTYPE" == darwin* ]]; then
-  export BROWSER='open'
+if [[ "$OSTYPE" == linux* ]]; then
+  if [[ -n "$DISPLAY" ]]; then
+    export BROWSER=firefox
+  elif [[ "$TERM" == "linux" ]] && type 'lynx' > /dev/null; then
+    export BROWSER=links
+  elif type 'browsh' > /dev/null && type 'firefox' > /dev/null; then
+    export BROWSER=browsh
+  fi
 fi
 
 #
@@ -19,7 +25,11 @@ fi
 
 export EDITOR='vim'
 export VISUAL='vim'
-export PAGER='less'
+if type 'bat' > /dev/null; then
+  export PAGER='bat'
+else
+  export PAGER='less'
+fi
 
 #
 # Language

@@ -8,25 +8,26 @@
 # Ensure that a non-login, non-interactive shell has a defined environment.
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
+fi
 
-  if [[ ! $(uname -o) == "Android" ]]; then
-    # ArcoLinux
-    if [ -d "$HOME/.bin" ]; then
-      PATH="$HOME/.bin:$PATH"
-    fi
+# if not an android device (Termux)
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
 
-    if [ -d "$HOME/.local/bin" ]; then
-      PATH="$HOME/.local/bin:$PATH"
-    fi
-
-    # Export additional environment variables.
-    export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
-    export USER_SCRIPTS="$HOME/git/priv/scripts"
-
-
-    PATH="$PATH:$ANDROID_SDK_ROOT/tools"
-    PATH="$PATH:$ANDROID_SDK_ROOT/platform-tools"
-    PATH="$PATH:$USER_SCRIPTS"
-    PATH="$PATH:$USER_SCRIPTS/g810_leds_timeout"
+  if [ -d "$HOME/.bin" ]; then
+    PATH="$HOME/.bin:$PATH"
   fi
+
+  if [ -d "$HOME/.local/bin" ]; then
+    PATH="$HOME/.local/bin:$PATH"
+  fi
+
+  # Export additional environment variables.
+  export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
+  export USER_SCRIPTS="$HOME/git/priv/scripts"
+
+
+  PATH="$PATH:$ANDROID_SDK_ROOT/tools"
+  PATH="$PATH:$ANDROID_SDK_ROOT/platform-tools"
+  PATH="$PATH:$USER_SCRIPTS"
+  PATH="$PATH:$USER_SCRIPTS/g810_leds_timeout"
 fi
