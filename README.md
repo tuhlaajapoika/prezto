@@ -5,7 +5,9 @@ Prezto is the configuration framework for [Zsh][1]; it enriches the command line
 interface environment with sane defaults, aliases, functions, auto completion,
 and prompt themes.
 
-This is my personal fork mostly for using enviromental variables and aliases. I'm learning to use git at the same time.
+Note:
+This is my personal fork mostly for enviromental variables and aliases.
+Includes Termux fixes.
 
 
 Installation
@@ -74,7 +76,7 @@ git submodule update --init --recursive
 ```
 
 Configuring a remote fork
------
+-------------------------
 
   1. Open Terminal.
   2. List the current configured remote repository for your fork.
@@ -91,7 +93,7 @@ Configuring a remote fork
   ```
 
 Syncing a fork
------
+--------------
 
   1. Open terminal and change working directory to local project.
   2. Fetch upstream, checkout fork's local master, merge
