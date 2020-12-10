@@ -2,11 +2,8 @@
 [[ $- != *i* ]] && return
 
 # MPD
-alias mpd-restart-server='systemctl --user stop {mpd.socket,mpd.service} && systemctl --user start {mpd.socket,mpd.service}'
+alias mpd-restart='systemctl --user stop {mpd.socket,mpd.service} && systemctl --user start {mpd.socket,mpd.service}'
 alias tmpd='tail -f /tmp/mpd.log | egrep -v "(process command \"currentsong\"|process command list|process command \"status\"|client.*closed$|client.*command returned.*)"'
-
-# ToDo script
-alias todo="todo.sh"
 
 # gcalcli - Google Calendar
 alias gcal='gcalcli agenda'
