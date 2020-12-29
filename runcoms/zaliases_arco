@@ -54,11 +54,12 @@ alias pacman='sudo pacman --color auto'
 alias update='sudo pacman -Syu'
 
 # yay as aur helper - updates everything
-alias pksyua="yay -Syu --noconfirm"
-alias upall="yay -Syu --noconfirm"
+alias pksyua='yay -Syu --noconfirm'
+alias upall='yay -Syu --noconfirm'
 
-# yay list upgradable
-alias liupall="yay -Sy && yay -Qu"
+# yay list upgradeable
+alias liup="yay -Qu"
+alias liupall="yay -Qu"
 
 #ps
 alias psa="ps auxf"

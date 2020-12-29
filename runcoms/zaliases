@@ -10,9 +10,6 @@ alias gcal='gcalcli agenda'
 alias gcalw='gcalcli calw --monday'
 alias gcalm='gcalcli calm --monday'
 
-# ddcutil
-alias ddcutil="sudo ddcutil"
-
 alias ffn='firefox -p noob'
 alias ffj='firefox -p jyu'
 alias ffp='firefox -p priv'
