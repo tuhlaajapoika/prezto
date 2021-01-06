@@ -1,15 +1,13 @@
-# TODO: if uname --operating-system == Android; then; else
-
+# For Termux Android
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-
-alias todo="todo.sh"
 
 alias p='ps -f'
 
 #list
+#alias ls='ls --color=auto'
 alias la='ls -a'
-ll='ls -la'
+alias ll='ls -la'
 alias l='ls'
 alias l.="ls -A | egrep '^\.'"
 
