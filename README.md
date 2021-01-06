@@ -102,10 +102,14 @@ Syncing a fork
   git checkout master
   git merge upstream/master
   ```
-  3. If there are issues with submodules: use gSu aka
+  3. Use gSu aka
   ```console
   git submodule foreach git pull origin master
   ```
+  3.1 If necessary
+ ```console
+ git submodule update --init --recursive
+ ```
 
 Usage
 -----
