@@ -106,10 +106,10 @@ Syncing a fork
   ```console
   git submodule foreach git pull origin master
   ```
-  3.1 If necessary
- ```console
- git submodule update --init --recursive
- ```
+  4. If necessary
+  ```console
+  git submodule update --init --recursive
+  ```
 
 Usage
 -----
