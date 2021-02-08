@@ -24,10 +24,11 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
   # Export additional environment variables.
   export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
   export USER_SCRIPTS="$HOME/git/priv/scripts"
-
+  export JETBRAINS_ROOT="/opt/JetBrains"
 
   PATH="$PATH:$ANDROID_SDK_ROOT/tools"
   PATH="$PATH:$ANDROID_SDK_ROOT/platform-tools"
   PATH="$PATH:$USER_SCRIPTS"
   PATH="$PATH:$USER_SCRIPTS/g810_leds_timeout"
+  PATH="$PATH:$JETBRAINS_ROOT/Rider-2020.3.2/bin"
 fi
