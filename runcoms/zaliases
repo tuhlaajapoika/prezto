@@ -32,7 +32,7 @@ alias p='ps -f'
 
 alias diff-aliases='diff ~/.zaliases_arco ~/.bashrc-latest'
 
-alias foobar2000='WINEARCH=win32 WINEPREFIX=~/.wine32_fb2k wine "C:\Program Files\foobar2000\foobar2000.exe"'
+alias foobar2000='WINEPREFIX=~/.wine64_fb2k wine "C:\Program Files (x86)\foobar2000\foobar2000.exe"'
 
 alias kmsg='sudo less /proc/kmsg'
 
